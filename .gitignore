@@ -1,5 +1,8 @@
-node_modules/
-.wwebjs_auth/
-.wwebjs_cache/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
 .env
-whatsapp.env
+*.db
+*.db-shm
+*.db-wal

@@ -1,0 +1,20 @@
+# Perfiles de modelo. El agente es agnóstico al proveedor: cada sesión elige uno.
+# Para cambiarlos sin tocar el paquete, copia este fichero a <carpeta de datos>/config/.
+default: remote-haiku
+
+profiles:
+  remote-haiku:
+    description: Claude Haiku 5.5 (remoto, API de Anthropic)
+    provider: anthropic
+    model: claude-haiku-5-5
+    max_tokens: 16000
+    # low | medium | high | xhigh | max. Haiku 5.5 no admite temperature/top_p.
+    effort: medium
+
+  local-ollama:
+    description: Modelo local vía Ollama (hueco para F6)
+    provider: openai_compatible
+    base_url: http://127.0.0.1:11434/v1
+    model: qwen3:8b
+    api_key: ollama
+    max_tokens: 8000

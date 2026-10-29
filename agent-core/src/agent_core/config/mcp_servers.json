@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "filesystem": {
+      "command": "{python}",
+      "args": ["-m", "agent_core.mcp.fs_server", "--root", "{sandbox}"],
+      "resource": { "arg": "path", "root": "{sandbox}" }
+    }
+  }
+}
